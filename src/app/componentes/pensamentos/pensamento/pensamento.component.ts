@@ -31,15 +31,12 @@ export class PensamentoComponent implements OnInit {
   mudarIconeFavorito():string {
     if(this.pensamento.favorito == false) {
       return 'inativo';
-    } else {
-      return 'ativo';
-    }
+    } 
+    return 'ativo';
   }
 
   atualizarFavoritos() {
-    this.service.mudarFavorito(this.pensamento).subscribe();
-    console.log(this.pensamento.favorito);
-    
+    this.service.mudarFavorito(this.pensamento).subscribe();    
   }
 
 }
